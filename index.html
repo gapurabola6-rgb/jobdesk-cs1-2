@@ -8,7 +8,7 @@
 <title>JOBDESK SHIFT - PANAH4D × MOTIF4D</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="shortcut icon" href="https://fav.luvtoberi.com/fav/favmotif4d.webp" />
+
 <link rel="stylesheet" href="style.css">
 
 </head>
@@ -545,6 +545,37 @@ body{
 
 }
   
+.reset-all{
+
+    margin-top:15px;
+
+    width:100%;
+
+    background:#C62828;
+
+    color:#fff;
+
+    border:none;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.reset-all:hover{
+
+    background:#B71C1C;
+
+}
   </style>
 <body>
 
@@ -645,7 +676,10 @@ body{
                     💾 Simpan Catatan
 
                 </button>
-
+<!-- Tambahkan di sini -->
+<button class="reset-all" onclick="resetSemua()">
+ RESET SEMUA
+</button>
             </div>
 
         </div>
@@ -712,7 +746,6 @@ body{
                 </button>
 
             </div>
-
         </div>
 
     </div>
@@ -739,14 +772,15 @@ const jobsPagi = [
 
 "FOLLOW UP PANAH4D & MOTIF4D (CS1)",
 
-"EDIT BEBAS CS 1 / 2",
-
-"POST EDIT BEBAS CS 1 / 2",
-
-"CARI MEMBER WAJIB 2DIGIT SISA ANAK MALAM",
+"POSTINGAN CS1 / CS2 ",
 
 "JUAL PULSA",
 
+"CARI MEMBER WAJIB (2DIGIT) SISA NYA ANAK MALAM",
+
+"CEK LINK",
+
+"MASA AKTIF (CS1)",
 ];
 
 const jobsMalam = [
@@ -766,11 +800,14 @@ const jobsMalam = [
 "COPYBANK ",
 
 "FOTO EWALLET & FOTO PULSA",
+
+"LAPOR PULSA",
   
 "INPUT DOC BONUS MOTIF4D & PANAH4D (CS1)",
 
 "INPUT QRIS MOTIF4D & PANAH4D (CS1)",
 
+"MASA AKTIF (CS1) ",
 
 ];
 
@@ -1154,6 +1191,20 @@ loadChecklist();
 updatePagi();
 
 updateMalam();
+  /* ==========================================
+   RESET SEMUA
+========================================== */
+
+function resetSemua(){
+
+    if(!confirm("Yakin ingin menghapus semua checklist dan catatan?"))
+        return;
+
+    localStorage.clear();
+
+    location.reload();
+
+}
   </script>
 </body>
 </html>
