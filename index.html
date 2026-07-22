@@ -321,21 +321,47 @@ body::before{
 
 }
 
+.card{
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    min-height:78px;
+
+}
+
 .left{
 
     display:flex;
-
     align-items:center;
-
     gap:15px;
+    flex:1;
+
+}
+
+.left input[type="checkbox"]{
+
+    width:22px;
+    height:22px;
+
+    min-width:22px;
+    min-height:22px;
+
+    max-width:22px;
+    max-height:22px;
+
+    flex:0 0 22px;
+
+    margin:0;
+
+    accent-color:#00B8D9;
 
 }
 
 .job{
 
-    font-size:15px;
-
-    font-weight:600;
+    flex:1;
+    line-height:1.4;
 
 }
 
