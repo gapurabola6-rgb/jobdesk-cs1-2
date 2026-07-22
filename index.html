@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>JOBDESK SHIFT - PANAH4D × MOTIF4D</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<style>
+  /* ===================================================
+   RESET
+=================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:#070B11;
+
+    color:#fff;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    padding:40px;
+
+    position:relative;
+
+}
+
+/* ===================================================
+   BACKGROUND
+=================================================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background:
+
+    linear-gradient(
+    130deg,
+
+    transparent 48%,
+
+    rgba(0,184,217,.05) 49%,
+
+    rgba(0,184,217,.05) 50%,
+
+    transparent 51%),
+
+    linear-gradient(
+
+    -35deg,
+
+    transparent 65%,
+
+    rgba(255,255,255,.03) 66%,
+
+    transparent 67%),
+
+    linear-gradient(
+
+    90deg,
+
+    transparent 20%,
+
+    rgba(0,184,217,.03) 21%,
+
+    transparent 22%);
+
+}
+
+/* ===================================================
+   CONTAINER
+=================================================== */
+
+.container{
+
+    max-width:1500px;
+
+    margin:auto;
+
+}
+
+/* ===================================================
+   LOGO
+=================================================== */
+
+.brand-logo{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+    margin-bottom:25px;
+
+}
+
+.logo{
+
+    height:65px;
+
+    width:auto;
+
+    object-fit:contain;
+
+}
+
+.divider{
+
+    font-size:30px;
+
+    color:#ffffff;
+
+    font-weight:700;
+
+}
+
+/* ===================================================
+   TITLE
+=================================================== */
+
+.main-title{
+
+    background:#10161F;
+
+    border:1px solid rgba(0,184,217,.15);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    margin-bottom:30px;
+
+    text-align:center;
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.main-title h1{
+
+    color:#4FD9FF;
+
+    font-size:34px;
+
+    margin-bottom:8px;
+
+}
+
+.main-title p{
+
+    color:#94A3B8;
+
+}
+
+/* ===================================================
+   DASHBOARD
+=================================================== */
+
+.dashboard{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:30px;
+
+}
+
+/* ===================================================
+   SHIFT BOX
+=================================================== */
+
+.shift-box{
+
+    background:#10161F;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    border:1px solid rgba(0,184,217,.12);
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.shift-header{
+
+    margin-bottom:20px;
+
+}
+
+.shift-header h2{
+
+    color:#4FD9FF;
+
+    font-size:26px;
+
+}
+
+.shift-header p{
+
+    color:#94A3B8;
+
+}
+
+/* ===================================================
+   PROGRESS
+=================================================== */
+
+.progress-card{
+
+    margin-bottom:25px;
+
+}
+
+.progress-title{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:10px;
+
+    font-weight:600;
+
+}
+
+.progress{
+
+    height:12px;
+
+    background:#1F2937;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+}
+
+.progress span{
+
+    display:block;
+
+    width:0;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    #00A6C7,
+
+    #4FD9FF);
+
+}
+
+/* ===================================================
+   CARD
+=================================================== */
+
+.card{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 20px;
+
+    margin-bottom:15px;
+
+    border-radius:15px;
+
+    background:#111827;
+
+    border:1px solid rgba(0,184,217,.08);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    border-color:#00B8D9;
+
+    transform:translateY(-3px);
+
+}
+
+.left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.job{
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.done{
+
+    text-decoration:line-through;
+
+    opacity:.45;
+
+}
+
+input[type=checkbox]{
+
+    width:22px;
+
+    height:22px;
+
+    accent-color:#00B8D9;
+
+    cursor:pointer;
+
+}
+
+.status{
+
+    min-width:95px;
+
+    text-align:center;
+
+    border-radius:50px;
+
+    padding:8px 15px;
+
+    background:#3A2A00;
+
+    color:#FFD166;
+
+    font-weight:700;
+
+    font-size:12px;
+
+}
+
+.finish{
+
+    background:#143924;
+
+    color:#4ADE80;
+
+}
+
+/* ===================================================
+   NOTE
+=================================================== */
+
+.note-box{
+
+    margin-top:25px;
+
+}
+
+.note-box h3{
+
+    margin-bottom:12px;
+
+    color:#4FD9FF;
+
+}
+
+.note-box textarea{
+
+    width:100%;
+
+    height:180px;
+
+    resize:vertical;
+
+    background:#0C131D;
+
+    border:1px solid rgba(0,184,217,.12);
+
+    border-radius:15px;
+
+    color:#fff;
+
+    padding:15px;
+
+    outline:none;
+
+}
+
+.note-box textarea:focus{
+
+    border-color:#00B8D9;
+
+}
+
+.note-box button{
+
+    margin-top:15px;
+
+    background:#00B8D9;
+
+    color:#fff;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:12px 20px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+}
+
+.note-box button:hover{
+
+    background:#0095AF;
+
+}
+
+/* ===================================================
+   FOOTER
+=================================================== */
+
+.footer{
+
+    margin-top:20px;
+
+    color:#94A3B8;
+
+}
+
+.bottom-info{
+
+    margin-top:35px;
+
+    text-align:center;
+
+    color:#94A3B8;
+
+}
+
+/* ===================================================
+   RESPONSIVE
+=================================================== */
+
+@media(max-width:1000px){
+
+.dashboard{
+
+    grid-template-columns:1fr;
+
+}
+
+body{
+
+    padding:20px;
+
+}
+
+.main-title h1{
+
+    font-size:28px;
+
+}
+
+.logo{
+
+    height:45px;
+
+}
+
+.divider{
+
+    font-size:22px;
+
+}
+
+}
+  
+  </style>
+<body>
+
+<div class="container">
+
+    <!-- =========================
+         LOGO
+    ========================== -->
+
+    <div class="brand-logo">
+
+        <img src="https://panahselot.com/images/logoweb.png"
+             class="logo"
+             alt="PANAH4D">
+
+        <span class="divider">×</span>
+
+        <img src="https://motifmekar.com/images/logoweb.png"
+             class="logo"
+             alt="MOTIF4D">
+
+    </div>
+
+    <!-- =========================
+         TITLE
+    ========================== -->
+
+    <div class="main-title">
+
+        <h1>📋 JOBDESK SHIFT</h1>
+
+        <p>
+            Pastikan seluruh checklist sudah diperiksa sebelum pergantian shift.
+        </p>
+
+    </div>
+
+    <!-- =========================
+         DASHBOARD
+    ========================== -->
+
+    <div class="dashboard">
+
+        <!-- ======================================
+             SHIFT PAGI
+        ======================================= -->
+
+        <div class="shift-box">
+
+            <div class="shift-header">
+
+                <h2>🌞 SHIFT PAGI</h2>
+
+                <p>Checklist Pagi</p>
+
+            </div>
+
+            <div class="progress-card">
+
+                <div class="progress-title">
+
+                    <span>MISSION PROGRESS</span>
+
+                    <span id="jumlahPagi">0 / 0</span>
+
+                </div>
+
+                <div class="progress">
+
+                    <span id="barPagi"></span>
+
+                </div>
+
+            </div>
+
+            <div id="listPagi"></div>
+
+            <div class="footer">
+
+                <span>
+                    Completion :
+                    <b id="persenPagi">0%</b>
+                </span>
+
+            </div>
+
+            <div class="note-box">
+
+                <h3>📝 CATATAN SHIFT PAGI</h3>
+
+                <textarea
+                    id="catatanPagi"
+                    placeholder="Tulis laporan Shift Pagi..."
+                ></textarea>
+
+                <button id="savePagi">
+
+                    💾 Simpan Catatan
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- ======================================
+             SHIFT MALAM
+        ======================================= -->
+
+        <div class="shift-box">
+
+            <div class="shift-header">
+
+                <h2>🌙 SHIFT MALAM</h2>
+
+                <p>Checklist Malam</p>
+
+            </div>
+
+            <div class="progress-card">
+
+                <div class="progress-title">
+
+                    <span>MISSION PROGRESS</span>
+
+                    <span id="jumlahMalam">0 / 0</span>
+
+                </div>
+
+                <div class="progress">
+
+                    <span id="barMalam"></span>
+
+                </div>
+
+            </div>
+
+            <div id="listMalam"></div>
+
+            <div class="footer">
+
+                <span>
+
+                    Completion :
+
+                    <b id="persenMalam">0%</b>
+
+                </span>
+
+            </div>
+
+            <div class="note-box">
+
+                <h3>📝 CATATAN SHIFT MALAM</h3>
+
+                <textarea
+                    id="catatanMalam"
+                    placeholder="Tulis laporan Shift Malam..."
+                ></textarea>
+
+                <button id="saveMalam">
+
+                    💾 Simpan Catatan
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <div class="bottom-info">
+
+        <span id="tanggal"></span>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+<script>
+  /* ==========================================
+   JOB DATA
+========================================== */
+
+const jobsPagi = [
+
+"FOLLOW UP PANAH4D & MOTIF4D (CS1)",
+
+"EDIT BEBAS CS 1 / 2",
+
+"POST EDIT BEBAS CS 1 / 2",
+
+"CARI MEMBER WAJIB 2DIGIT SISA ANAK MALAM",
+
+"JUAL PULSA",
+
+];
+
+const jobsMalam = [
+
+"UPDATE PREDIKSI PANAH4D & MOTIF4D (CS1)",
+
+"UPDATE BUKTI JP PANAH4D & MOTIF4D (CS1)",
+
+"EDIT MOTIF4D & PANAH4D (CS1)",
+
+"FOLLOW UP PANAH4D & MOTIF4D (CS1)",
+
+"CARI MEMBER CS 1 & CS 2",
+
+"CEK LINK (CS1)",
+
+"COPYBANK ",
+
+"FOTO EWALLET & FOTO PULSA",
+  
+"INPUT DOC BONUS MOTIF4D & PANAH4D (CS1)",
+
+"INPUT QRIS MOTIF4D & PANAH4D (CS1)",
+
+
+];
+
+
+/* ==========================================
+   ELEMENT
+========================================== */
+
+const listPagi = document.getElementById("listPagi");
+
+const listMalam = document.getElementById("listMalam");
+
+
+/* ==========================================
+   RENDER SHIFT PAGI
+========================================== */
+
+function renderPagi(){
+
+    listPagi.innerHTML="";
+
+    jobsPagi.forEach((job,index)=>{
+
+        listPagi.innerHTML+=`
+
+        <div class="card">
+
+            <div class="left">
+
+                <input
+                type="checkbox"
+                id="pagi${index}"
+                onchange="togglePagi(this)">
+
+                <div class="job">
+
+                    ${job}
+
+                </div>
+
+            </div>
+
+            <div class="status">
+
+                Pending
+
+            </div>
+
+        </div>
+
+        `;
+
+    });
+
+}
+
+
+/* ==========================================
+   RENDER SHIFT MALAM
+========================================== */
+
+function renderMalam(){
+
+    listMalam.innerHTML="";
+
+    jobsMalam.forEach((job,index)=>{
+
+        listMalam.innerHTML+=`
+
+        <div class="card">
+
+            <div class="left">
+
+                <input
+                type="checkbox"
+                id="malam${index}"
+                onchange="toggleMalam(this)">
+
+                <div class="job">
+
+                    ${job}
+
+                </div>
+
+            </div>
+
+            <div class="status">
+
+                Pending
+
+            </div>
+
+        </div>
+
+        `;
+
+    });
+
+}
+
+
+/* ==========================================
+   LOAD
+========================================== */
+
+renderPagi();
+
+renderMalam();
+  /* ==========================================
+   UPDATE SHIFT PAGI
+========================================== */
+
+function updatePagi(){
+
+    const total = jobsPagi.length;
+
+    const checked = document.querySelectorAll("#listPagi input:checked").length;
+
+    const persen = Math.round((checked/total)*100);
+
+    document.getElementById("jumlahPagi").innerHTML =
+    checked+" / "+total;
+
+    document.getElementById("persenPagi").innerHTML =
+    persen+"%";
+
+    document.getElementById("barPagi").style.width =
+    persen+"%";
+
+}
+
+
+/* ==========================================
+   UPDATE SHIFT MALAM
+========================================== */
+
+function updateMalam(){
+
+    const total = jobsMalam.length;
+
+    const checked = document.querySelectorAll("#listMalam input:checked").length;
+
+    const persen = Math.round((checked/total)*100);
+
+    document.getElementById("jumlahMalam").innerHTML =
+    checked+" / "+total;
+
+    document.getElementById("persenMalam").innerHTML =
+    persen+"%";
+
+    document.getElementById("barMalam").style.width =
+    persen+"%";
+
+}
+
+
+/* ==========================================
+   TOGGLE PAGI
+========================================== */
+
+function togglePagi(el){
+
+    const card = el.closest(".card");
+
+    const job = card.querySelector(".job");
+
+    const status = card.querySelector(".status");
+
+    if(el.checked){
+
+        job.classList.add("done");
+
+        status.innerHTML="DONE";
+
+        status.classList.add("finish");
+
+    }else{
+
+        job.classList.remove("done");
+
+        status.innerHTML="Pending";
+
+        status.classList.remove("finish");
+
+    }
+
+    saveChecklist();
+
+    updatePagi();
+
+}
+
+
+/* ==========================================
+   TOGGLE MALAM
+========================================== */
+
+function toggleMalam(el){
+
+    const card = el.closest(".card");
+
+    const job = card.querySelector(".job");
+
+    const status = card.querySelector(".status");
+
+    if(el.checked){
+
+        job.classList.add("done");
+
+        status.innerHTML="DONE";
+
+        status.classList.add("finish");
+
+    }else{
+
+        job.classList.remove("done");
+
+        status.innerHTML="Pending";
+
+        status.classList.remove("finish");
+
+    }
+
+    saveChecklist();
+
+    updateMalam();
+
+}
+
+
+/* ==========================================
+   SIMPAN CHECKLIST
+========================================== */
+
+function saveChecklist(){
+
+    const pagi=[];
+
+    document
+    .querySelectorAll("#listPagi input")
+    .forEach(cb=>{
+
+        pagi.push(cb.checked);
+
+    });
+
+    const malam=[];
+
+    document
+    .querySelectorAll("#listMalam input")
+    .forEach(cb=>{
+
+        malam.push(cb.checked);
+
+    });
+
+    localStorage.setItem(
+        "checklistPagi",
+        JSON.stringify(pagi)
+    );
+
+    localStorage.setItem(
+        "checklistMalam",
+        JSON.stringify(malam)
+    );
+
+}
+
+
+/* ==========================================
+   LOAD CHECKLIST
+========================================== */
+
+function loadChecklist(){
+
+    const pagi =
+    JSON.parse(localStorage.getItem("checklistPagi")) || [];
+
+    document
+    .querySelectorAll("#listPagi input")
+    .forEach((cb,i)=>{
+
+        if(pagi[i]){
+
+            cb.checked=true;
+
+            togglePagi(cb);
+
+        }
+
+    });
+
+    const malam =
+    JSON.parse(localStorage.getItem("checklistMalam")) || [];
+
+    document
+    .querySelectorAll("#listMalam input")
+    .forEach((cb,i)=>{
+
+        if(malam[i]){
+
+            cb.checked=true;
+
+            toggleMalam(cb);
+
+        }
+
+    });
+
+}
+
+
+/* ==========================================
+   CATATAN SHIFT
+========================================== */
+
+const catatanPagi =
+document.getElementById("catatanPagi");
+
+const catatanMalam =
+document.getElementById("catatanMalam");
+
+
+catatanPagi.value =
+localStorage.getItem("catatanPagi") || "";
+
+catatanMalam.value =
+localStorage.getItem("catatanMalam") || "";
+
+
+document
+.getElementById("savePagi")
+.onclick=function(){
+
+    localStorage.setItem(
+        "catatanPagi",
+        catatanPagi.value
+    );
+
+    alert("Catatan Shift Pagi berhasil disimpan.");
+
+};
+
+
+document
+.getElementById("saveMalam")
+.onclick=function(){
+
+    localStorage.setItem(
+        "catatanMalam",
+        catatanMalam.value
+    );
+
+    alert("Catatan Shift Malam berhasil disimpan.");
+
+};
+
+
+/* ==========================================
+   TANGGAL
+========================================== */
+
+document.getElementById("tanggal").innerHTML =
+new Date().toLocaleDateString(
+'id-ID',
+{
+weekday:'long',
+day:'numeric',
+month:'long',
+year:'numeric'
+}
+);
+
+
+/* ==========================================
+   START
+========================================== */
+
+loadChecklist();
+
+updatePagi();
+
+updateMalam();
+  </script>
+</body>
+</html>
